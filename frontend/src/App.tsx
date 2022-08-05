@@ -16,7 +16,7 @@ function App() {
   }
 
   const handleClick = () => {
-    axios.get(`https://api.github.com/users/${text}`)
+    axios.get(`${import.meta.env.VITE_URL_BASE}/${text}`)
     .then((response) => {
       setInfo(response.data);
     })
